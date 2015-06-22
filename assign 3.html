@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<HTML>
+<html lang="en">
+<HEAD>
+	<TITLE>Seneca Coop Application</Title>
+	<meta http-equiv="content-type"
+              content="text/html;charset=utf-8" />
+	<script src="assign3.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/assign3.css"> 
+</HEAD>
+<BODY>
+		<div class="clsform">
+		<form 	id="coop_app" method =post action ="http://formpost.azurewebsites.net/home/test"
+				onsubmit="return validate(coop_app)">
+		<h3>Coop Programm Application Form</h3>
+		<p>Required fields are followed by *</p>
+		<p><strong>Basic information</strong></p>
+		<p>Full Name: <input type="text" name="fname" required/>*</p>
+		<p>Student ID: <input type="text" name="stdno" required/>*</p>
+		<p>Learn ID: <input type="text" name="lrnid" required/>*</p>
+		<p id=senemail>Seneca email: <input type="hidden" name="senecaemail" value="flase"/></p>
+		<p>Alternative email: <input type="email" name="altemail"/></p>
+		<p>Phone Number:<input type="tel" name="phone" required />*</p>
+		<p>Address: <input type="text" name="addr" required/>*</p>
+		<p>City: <input type="text" name="city" required/>*</p>
+		<p>Province: <select name="province" required>
+				<optgroup label="Province">
+                <option value="Alberta">Alberta</option>
+                <option value="British Columbia">British Columbia</option>
+                <option value="Manitoba">Manitoba</option>
+                <option value="New Brunswick">New Brunswick</option>
+                <option value="NewFoundLand and Labrador">NewFoundLand and Labrador</option>
+                <option value="NovaScotia">NovaScotia</option>
+                <option value="Ontario">Ontario</option>
+                <option value="Prince Edward Island">Prince Edward Island</option>
+				<option value="Quebec">Quebec</option>
+				<option value="Saskatchewan">Saskatchewan</option>
+				</optgroup>
+				<optgroup label="Territories">
+				<option value="North West Territories">North West Territories</option>
+				<option value="Nunavut">Nunavut</option>
+				<option value="Yukon">Yukon</option>
+				</optgroup>
+            </select>
+		*</p>
+		<h3>Education</h3>
+		<p>School: <input type="text" name="school" required/>*</p>
+		<p>Program: <input type="text" name="pgm" required/>*</p>
+		<p>
+						<fieldset>
+							<legend>Education level:</legend>
+							<label> <input type="radio" name="eudlvl" value="Technical Diploma"/> Technical Diploma </label><br/>
+							<label> <input type="radio" name="eudlvl" value="College Diploma"/> College Diploma </label><br/>
+							<label> <input type="radio" name="eudlvl" value="Bachelor's Degree"/> Bachelor's Degree</label><br/>
+							<label> <input type="radio" name="eudlvl" value="Master's Degree"/> Master's Degree</label><br/>
+							<label> <input type="radio" name="eudlvl" value="Others"/> Others</label><br/>
+						</fieldset>
+		</p>
+		<p>
+						<fieldset>
+							<legend>Education Status:</legend>
+							<label> <input type="radio" name="eudstat" value="Grudated"/> Grudated </label><br/>
+							<label> <input type="radio" name="eudstat" value="Current Enrolled"/> Current Enrolled </label><br/>
+							<label> <input type="radio" name="eudstat" value="Did not grudated"/> Did not Grudated</label><br/>
+						</fieldset>
+		</p>
+		<p>Grudation Date: <input type="date" name="grudation_date"/></p>
+		<h3>Work Experience</h3>
+		<p>Employer: <input type="text" name="employer"/></p>
+		<p>Job title: <input type="text" name="job_title"/></p>
+		<p>Job Duty: <input type="text" name="job_duty"/></p>
+		<p>Worked Year: <input type="number" name="wrkyr"/></p>
+		<br>
+		<br>
+		<input type="submit" value="Submit"/>
+		<input type="reset" value="Reset" />
+		</form>
+		</div>	
+</BODY>
+</HTML>
